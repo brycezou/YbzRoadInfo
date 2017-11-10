@@ -1,0 +1,1 @@
+mysql -h 5631ad9b1e946.sh.cdb.myqcloud.com -P 5975 -u root -p

@@ -1,0 +1,26 @@
+ALTER PROCEDURE dbo.AddOneRoad
+(
+	@RoadName varchar(100)
+)
+AS
+	
+	exec
+	(	'CREATE TABLE ' + @RoadName +
+		'(
+			number			int						NOT NULL		IDENTITY(1, 1)	PRIMARY KEY,
+			roadName		varchar(100)		NOT NULL,
+			checkTime	varchar(30)		NOT NULL,
+			pointNumber varchar(10)		NOT NULL,
+			longitude		varchar(30)		NOT NULL,
+			latitude			varchar(30)		NOT NULL,
+			leftRight		varchar(5)			NOT NULL,
+			markType		varchar(20)		NOT NULL,
+			layStyle			varchar(20)		NOT NULL,
+			plateStyle		varchar(20)		NOT NULL,
+			width			varchar(10)		NOT NULL,
+			height			varchar(10)		NOT NULL,
+			photoName	varchar(50)		NOT NULL
+		)'
+	)
+
+RETURN
